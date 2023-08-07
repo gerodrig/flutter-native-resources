@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:miscellanous/config/presentation/providers/sensors/accelerometer_providers.dart';
 
 class AccelerometerScreen extends ConsumerWidget {
@@ -11,6 +13,9 @@ class AccelerometerScreen extends ConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => context.go('/')),
         title: const Text('Accelerometer'),
       ),
       body: Center(

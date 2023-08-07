@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:miscellanous/config/presentation/providers/providers.dart';
 
 class GyroscopeBallScreen extends ConsumerWidget {
@@ -11,11 +13,15 @@ class GyroscopeBallScreen extends ConsumerWidget {
 
     return Scaffold(
         appBar: AppBar(
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => context.go('/'),
+          ),
           title: const Text('Gyroscope Ball'),
         ),
         body: SizedBox.expand(
             child: gyroscope$.when(
-                data: (value) => const Text('values'),
+                data: (value) => MovingBall(x: value.x, y: value.y),
                 error: (s, e) => Text('Error: $e'),
                 loading: () => const CircularProgressIndicator())));
   }
@@ -33,15 +39,15 @@ class MovingBall extends StatelessWidget {
     double screenWidth = size.width;
     double screenHeight = size.height;
 
-    double currentYPosition = y * 100;
-    double currentXPosition = x * 100;
+    double currentYPosition = y * 150;
+    double currentXPosition = x * 150;
 
     return Stack(
       alignment: Alignment.center,
       children: [
         AnimatedPositioned(
           curve: Curves.easeInOut,
-          duration: const Duration(milliseconds: 100),
+          duration: const Duration(milliseconds: 1000),
           left: (currentYPosition - 25) + (screenWidth / 2),
           top: (currentXPosition - 25) + (screenHeight / 2),
           child: const Ball(),
