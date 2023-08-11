@@ -30,4 +30,31 @@ final router = GoRouter(routes: [
     path: '/magnetometer',
     builder: (context, state) => const MagnetometerScreen(),
   ),
+  GoRoute(
+    path: '/biometric',
+    builder: (context, state) => const BiometricScreen(),
+  ),
+  GoRoute(
+    path: '/location',
+    builder: (context, state) => const LocationScreen(),
+  ),
+  GoRoute(
+    path: '/maps',
+    builder: (context, state) => const MapScreen(),
+  ),
+  GoRoute(
+    path: '/controlled-map',
+    builder: (context, state) => const ControlledMapScreen(),
+  ),
+  GoRoute(
+      path: '/pokemons',
+      builder: (context, state) => const PokemonsScreen(),
+      routes: [
+        GoRoute(
+            path: ':id',
+            builder: (context, state) {
+              final id = state.pathParameters['id'] ?? '1';
+              return PokemonScreen(pokemonId: id);
+            }),
+      ]),
 ]);
