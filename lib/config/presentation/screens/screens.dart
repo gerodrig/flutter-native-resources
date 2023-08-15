@@ -14,3 +14,9 @@ export 'package:miscellanous/config/presentation/screens/sensors/magnetometer_sc
 export 'package:miscellanous/config/presentation/screens/location/controlled_map_screen.dart';
 export 'package:miscellanous/config/presentation/screens/location/map_screen.dart';
 export 'package:miscellanous/config/presentation/screens/location/location_screen.dart';
+
+export 'package:miscellanous/config/presentation/screens/badge/badge_screen.dart';
+
+//Ads
+export 'package:miscellanous/config/presentation/screens/ads/ad_rewarded_screen.dart';
+export 'package:miscellanous/config/presentation/screens/ads/ad_full_screen.dart';

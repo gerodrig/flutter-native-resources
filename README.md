@@ -43,3 +43,18 @@ android/local.properties
 ios is in root .env GOOGLE_MAPS_API_KEY=
 
 ## Remember to update googlemaps api keys
+
+## Quick Actions
+
+quick_actions plugin is installed to manage quick actions
+
+## Badger
+
+the plugin to show notifications is flutter_app_badger.
+
+
+## Google mobile ads
+The plugin to implement ads in our application
+
+## Shared preferences
+This plugin save the users preferences in our app.

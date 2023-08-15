@@ -25,6 +25,11 @@
         android:label="miscellanous"
         android:icon="@mipmap/ic_launcher">
 
+        <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2509247635029870~7715233365"/>
+
          <meta-data android:name="com.google.android.geo.API_KEY"
                android:value="${google_maps_api_key}"/>
         <activity

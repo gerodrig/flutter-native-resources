@@ -5,9 +5,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:miscellanous/config/config.dart';
 import 'package:miscellanous/config/presentation/providers/providers.dart';
 
-void main() {
+void main() async {
   //? set the orientation to portrait only
   WidgetsFlutterBinding.ensureInitialized();
+  //? initialize the admob plugin
+  await AdmobPlugin.initialize();
+
+  //?setup quick Actions
+  QuickActionsPlugin.registerActions();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(const ProviderScope(child: MainApp()));
