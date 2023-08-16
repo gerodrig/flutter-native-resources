@@ -2,8 +2,6 @@ export 'package:miscellanous/config/presentation/screens/biometrics/biometric_sc
 export 'package:miscellanous/config/presentation/screens/home/home_screen.dart';
 export 'package:miscellanous/config/presentation/screens/permissions/ask_location_screen.dart';
 export 'package:miscellanous/config/presentation/screens/permissions/permissions_screen.dart';
-export 'package:miscellanous/config/presentation/screens/pokemons/pokemon_screen.dart';
-export 'package:miscellanous/config/presentation/screens/pokemons/pokemons_screen.dart';
 export 'package:miscellanous/config/presentation/screens/sensors/accelerometer_screen.dart';
 export 'package:miscellanous/config/presentation/screens/sensors/compass_screen.dart';
 export 'package:miscellanous/config/presentation/screens/sensors/gyroscope_ball_screen.dart';
@@ -20,3 +18,8 @@ export 'package:miscellanous/config/presentation/screens/badge/badge_screen.dart
 //Ads
 export 'package:miscellanous/config/presentation/screens/ads/ad_rewarded_screen.dart';
 export 'package:miscellanous/config/presentation/screens/ads/ad_full_screen.dart';
+
+//Pokemons
+export 'package:miscellanous/config/presentation/screens/pokemons/pokemon_screen.dart';
+export 'package:miscellanous/config/presentation/screens/pokemons/pokemons_screen.dart';
+export 'package:miscellanous/config/presentation/screens/pokemons/db_pokemon_screen.dart';

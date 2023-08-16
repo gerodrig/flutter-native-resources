@@ -69,4 +69,8 @@ final router = GoRouter(routes: [
               return PokemonScreen(pokemonId: id);
             }),
       ]),
+  GoRoute(
+    path: '/db-pokemons',
+    builder: (context, state) => const DBPokemonsScreen(),
+  ),
 ]);

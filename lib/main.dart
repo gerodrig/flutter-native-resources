@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:miscellanous/config/config.dart';
 import 'package:miscellanous/config/presentation/providers/providers.dart';
+import 'package:workmanager/workmanager.dart';
 
 void main() async {
   //? set the orientation to portrait only
@@ -13,6 +14,24 @@ void main() async {
 
   //?setup quick Actions
   QuickActionsPlugin.registerActions();
+
+  //initialize the workmanager
+  Workmanager().initialize(callbackDispatcher, isInDebugMode: true);
+
+  //initializedtask
+  // Workmanager().registerOneOffTask(
+  //   "com.gerar.ca.miscellaneous.simpleTask",
+  //   "com.gerar.ca.miscellaneous.simpleTask",
+  //   inputData: <String, dynamic>{
+  //     'int': 1,
+  //     'bool': true,
+  //     'double': 1.0,
+  //     'string': 'string',
+  //     'array': [1, 2, 3],
+  //   },
+  //   constraints: Constraints(networkType: NetworkType.connected),
+  // );
+
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
   runApp(const ProviderScope(child: MainApp()));
